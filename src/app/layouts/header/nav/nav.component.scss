@@ -1,0 +1,22 @@
+.barra__navegacion {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  align-items: center;
+
+  &--logo {
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &--nav {
+    a {
+      padding: 0 1.5rem;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}

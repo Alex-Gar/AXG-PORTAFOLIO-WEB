@@ -43,7 +43,15 @@
 }
 
 @mixin grid($columnas, $gap) {
-    display: grid;
-    grid-template-columns: repeat($columnas, 1fr);
-    gap: $gap;
-  }
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}
+
+@mixin btn($color) {
+  background-color: $color;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-weight: v.$bold;
+  border-radius: 0.7rem;
+}

@@ -1,15 +1,64 @@
 <div class="contenedor">
-    <div class="barra__navegacion">
-        <div class="barra__navegacion--logo">
-            <h2>AXG - Alex Garcia</h2>
+    <!-- offcanvas area start -->
+    <div class="offcanvas__area ">
+        <div class="offcanvas__close">
+            <button class="offcanvas__close-btn offcanvas-close-btn">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M1 1L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
-        
-        <nav class="barra__navegacion--nav">
-            <a href="">Inicio</a>
-            <a href="">Proyectos</a>
-            <a href="">Sobre mi</a>
-            <a href="">Skills</a>
-            <a href="">Contactame</a>
-        </nav>
+        <div class="contenedor">
+            <div class="offcanvas__content">
+                <a href="/">
+                    AXG - Alex Garcia
+                </a>
+
+                <nav class="nav">
+                    <div class="nav-link"> <a routerLink="/" id="">Inicio</a></div>
+                    <div class="nav-link"> <a routerLink="/sobre-nosotros" id="">Sobre mi</a></div>
+                    <div class="nav-link"> <a routerLink="/contactanos" id="">Skills</a></div>
+                    <div class="nav-link"> <a routerLink="/proyectos" id="">Proyectos</a></div>
+                    <div class="nav-link"> <a routerLink="/contactame" id="">Contactame</a></div>
+                </nav>
+            </div>
+        </div>
     </div>
+    <div class="body-overlay"></div>
+    <!-- offcanvas area end -->
+
+    <!-- header area start -->
+    <header>
+        <!-- header main start -->
+        <div class="nav-bar">
+            <a href="/">
+                AXG - Alex Garcia
+            </a>
+
+            <div class="ocultar_menu">
+                <nav class="nav">
+                    <div class="nav-link"> <a routerLink="/" id="">Inicio</a></div>
+                    <div class="nav-link"> <a routerLink="/sobre-nosotros" id="">Sobre mi</a></div>
+                    <div class="nav-link"> <a routerLink="/contactanos" id="">Skills</a></div>
+                    <div class="nav-link"> <a routerLink="/proyectos" id="">Proyectos</a></div>
+                    <div class="nav-link"> <a routerLink="/contactame" id="">Contactame</a></div>
+                </nav>
+            </div>
+
+            <div class="none">
+                <button type="button" class="tp-offcanvas-open-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
+                        <rect x="1" width="19" height="2" fill="currentColor" />
+                        <rect x="4" y="7" width="16" height="2" fill="currentColor" />
+                        <rect x="9" y="14" width="11" height="2" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </header>
+    <!-- header area end -->
 </div>

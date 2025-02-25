@@ -1,0 +1,59 @@
+@use "base/variables" as v;
+
+.gradiente {
+  position: relative;
+  width: 100%;
+  height: 140rem;
+  right: 5rem;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 80rem;
+    height: 130rem;
+    background: radial-gradient(circle, rgba(74, 1, 123), transparent 70%);
+    filter: blur(20px); /* Difumina los bordes */
+    border-radius: 50%;
+    pointer-events: none; /* Evita interferir con el contenido */
+  }
+}
+
+.sobreMi {
+  position: absolute;
+
+  .sobreMi__info {
+    border-radius: 1rem;
+    backdrop-filter: blur(50px); /* Efecto de desenfoque */
+    background: rgba(255, 255, 255, 0.081); /* Fondo semitransparente */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde semitransparente */
+    &--redes {
+      margin: 5rem 0;
+
+      .alinear-redes {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin: 3rem 0;
+
+        .circulo {
+          background-color: v.$blanco;
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &--texto {
+      p {
+        span {
+          color: v.$rosa-secundario;
+        }
+      }
+    }
+  }
+}

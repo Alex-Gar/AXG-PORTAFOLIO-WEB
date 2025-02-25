@@ -1,26 +1,28 @@
 @use "base/variables" as v;
 
 .separador__lineas {
-   height: 20rem;
+  height: 5rem;
 
   &--linea1 {
     background-color: v.$rosa-secundario;
     transform: rotate(4deg);
-}
-&--linea2 {
+  }
+  &--linea2 {
     background-color: v.$morado-secundario;
     transform: rotate(-4deg);
-     margin: -2.1rem 0;
+    margin: -2.85rem 0;
   }
 
   .lineas {
     display: flex;
-    justify-content: space-around;
+    overflow: hidden;
+    gap: 1rem;
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       font-weight: v.$bold;
-      opacity: .6;
+      opacity: 0.6;
+      flex: 0 0 auto;
     }
   }
 }

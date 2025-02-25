@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+
+.separador__tecnologias {
+  margin: 2rem 0;
+  background: rgb(194, 16, 78);
+  background: linear-gradient(
+    90deg,
+    rgba(194, 16, 78, 1) 30%,
+    rgba(84, 1, 234, 1) 79%
+  );
+
+  &--titulo {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.6rem;
+      font-weight: v.$bold;
+      opacity: 0.6;
+      display: block;
+    }
+  }
+}

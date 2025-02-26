@@ -4,7 +4,18 @@
 .gradiente {
   position: relative;
   z-index: -2;
-
+  @include mx.tablet_mediana {
+    margin-left: 2rem;
+  }
+  @include mx.tablet_grande {
+    margin-left: 17rem;
+  }
+  @include mx.desktop_mediana {
+    margin-left: 20rem;
+  }
+  @include mx.desktop_grande {
+    margin-left: 40rem;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -15,49 +26,83 @@
     background: radial-gradient(circle, rgba(74, 1, 123), transparent 70%);
     filter: blur(20px); /* Difumina los bordes */
     border-radius: 50%;
-    pointer-events: none; /* Evita interferir con el contenido */
+    pointer-events: none;
+
+    @include mx.tablet_mediana {
+      width: 35%;
+      margin: 0 48rem;
+      height: 100rem;
+      top: -15rem;
+    }
   }
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100rem;
-    top: -20;
     left: 0;
     background: radial-gradient(circle, rgb(161, 5, 153), transparent 60%);
     filter: blur(20px);
     pointer-events: none;
     border-radius: 0% 50% 50% 0%;
+
+    @include mx.tablet_mediana {
+      width: 50%;
+      margin: 0 50rem;
+      height: 100rem;
+      top: -15rem;
+    }
+   
   }
 
   p {
     z-index: 1;
     position: absolute;
-    height: 53rem;
+    height: 55.5rem;
     overflow: hidden;
-    padding-top: 10rem;
+    padding-top: 18rem;
     color: transparent;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.35);
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     font-family: v.$binario;
+
+    @include mx.tablet_mediana {
+      overflow: visible;
+      padding-top: 6rem;
+      justify-content: flex-end;
+      max-width: 45%;
+      margin-left: 52rem;
+      font-size: 1.3rem;
+    }
+    @include mx.desktop_mediana {
+      font-size: 1.35rem;
+    }
+    @include mx.desktop_grande {
+      font-size: 1.4rem;
+      max-width: 35%;
+      margin-left: 60rem;
+    }
   }
 }
 
 .header {
   position: relative;
-  @include mx.tablet_pequena {
+  @include mx.tablet_mediana {
     height: 85vh;
   }
 
   &__info {
-    @include mx.tablet_pequena {
+    @include mx.tablet_mediana {
       @include mx.grid(2, 1rem);
     }
 
     &--title {
-      @include mx.tablet_pequena {
+      @include mx.tablet_mediana {
         grid-row: 1/2;
+      }
+      @include mx.tablet_mediana {
+        margin-top: 7rem;
       }
     }
     &--img {
@@ -66,9 +111,15 @@
       margin: 0 auto;
       width: 100%;
 
-      @include mx.tablet_pequena {
+      @include mx.telefono_pequeno {
+        width: 35rem;
+      }
+      @include mx.telefono_mediano {
+        width: 45rem;
+      }
+
+      @include mx.tablet_mediana {
         margin: 10rem auto;
-        // height: 80rem;
         width: 45rem;
         grid-row: 1/5;
         grid-column: 2/3;
@@ -76,23 +127,96 @@
 
       .gmail {
         position: absolute;
-        left: 8.5rem;
-        bottom: 31rem;
+        left: 5rem;
+        bottom: 29.5rem;
       }
       .instagram {
         position: absolute;
-        right: 8.8rem;
-        bottom: 40rem;
+        right: 4.5rem;
+        bottom: 37rem;
       }
       .github {
         position: absolute;
-        left: 10rem;
-        bottom: 51rem;
+        left: 4rem;
+        bottom: 45rem;
       }
       .linkedin {
         position: absolute;
-        right: 12rem;
-        top: 18rem;
+        right: 7rem;
+        top: 25rem;
+      }
+      @include mx.telefono_pequeno {
+        .gmail {
+          left: 11rem;
+          bottom: 30rem;
+        }
+        .instagram {
+          right: 11rem;
+          bottom: 38rem;
+        }
+        .github {
+          left: 11rem;
+          bottom: 49rem;
+        }
+        .linkedin {
+          right: 13rem;
+          top: 22rem;
+        }
+      }
+      @include mx.telefono_mediano {
+        .gmail {
+          left: 15rem;
+          bottom: 40rem;
+        }
+        .instagram {
+          right: 14rem;
+          bottom: 52rem;
+        }
+        .github {
+          left: 14rem;
+          bottom: 64rem;
+        }
+        .linkedin {
+          right: 18rem;
+          top: 24rem;
+        }
+      }
+
+      @include mx.tablet_mediana {
+        .gmail {
+          left: 60rem;
+          bottom: 17rem;
+        }
+        .instagram {
+          right: 8.5rem;
+          bottom: 27rem;
+        }
+        .github {
+          left: 59rem;
+          bottom: 40rem;
+        }
+        .linkedin {
+          right: 12rem;
+          top: 22rem;
+        }
+      }
+      @include mx.tablet_grande {
+        .gmail {
+          left: 76rem;
+          bottom: 17rem;
+        }
+        .instagram {
+          right: 15rem;
+          bottom: 27rem;
+        }
+        .github {
+          left: 76rem;
+          bottom: 40rem;
+        }
+        .linkedin {
+          right: 19rem;
+          top: 22rem;
+        }
       }
 
       a {
@@ -102,22 +226,31 @@
 
     &--terminal {
       width: 25rem;
-      height: 23.5rem;
-      background-color: rgba(45, 38, 71, 0.507);
+      height: 20.5rem;
+      background-color: rgba(0, 0, 0, 0.15);
+
       border-radius: 1rem;
       margin: 5rem auto;
       border: 1px solid rgba(255, 255, 255, 0.279);
 
-      @include mx.tablet_pequena {
-        width: 75rem;
-        height: 45rem;
-        margin: 0 -10rem;
+      @include mx.telefono_mediano {
+        width: 90%;
+        height: 30rem;
+      }
+      @include mx.tablet_mediana {
+        width: 50rem;
+        height: 35.5rem;
+      }
+
+      @include mx.tablet_mediana {
+        margin-top: -0rem;
       }
 
       .terminal__header {
         display: flex;
         border-bottom: 1px solid rgba(255, 255, 255, 0.279);
         background-color: rgba(240, 248, 255, 0.08);
+
         p {
           font-size: 0.5rem;
         }
@@ -126,6 +259,10 @@
           gap: 0.3rem;
           align-items: center;
           justify-content: center;
+          height: 2rem;
+          width: 4rem;
+          background-color: rgba(0, 0, 0, 0.15);
+
           @include mx.tablet_pequena {
             width: 6rem;
             margin: auto 0;
@@ -142,26 +279,26 @@
               width: 1.1rem;
             }
           }
-          height: 2rem;
-          width: 4rem;
         }
+
         &--pestana1 {
-          background-color: rgba(240, 248, 255, 0.08);
-          height: 2rem;
+          background-color: rgba(0, 0, 0, 0.208);
+          height: rem;
           width: 6rem;
           display: flex;
           align-items: center;
           border-right: 1px solid rgba(255, 255, 255, 0.279);
           border-left: 1px solid rgba(255, 255, 255, 0.279);
-          @include mx.tablet_pequena {
-            height: 3rem;
-            width: 12rem;
+
+          @include mx.telefono_mediano {
+            width: 9rem;
           }
           p {
             font-size: 0.7rem;
             margin: 0 auto;
-            @include mx.tablet_pequena {
-              font-size: 1.2rem;
+
+            @include mx.telefono_mediano {
+              font-size: 1rem;
             }
           }
         }
@@ -170,9 +307,13 @@
       .codigo {
         padding: 0 1rem;
         p {
-          font-size: 0.7rem;
-          @include mx.tablet_pequena {
-            font-size: 1.4rem;
+          font-size: 0.6rem;
+
+          @include mx.telefono_mediano {
+            font-size: 0.9rem;
+          }
+          @include mx.tablet_mediana {
+            font-size: 1.1rem;
           }
 
           .cadenas {
@@ -186,16 +327,28 @@
         display: flex;
         gap: 0.5rem;
         justify-content: end;
-        height: 1.3rem;
+        height: 1.8rem;
         align-items: center;
         border-top: 1px solid rgba(255, 255, 255, 0.279);
-        @include mx.tablet_pequena {
+
+        @include mx.telefono_mediano {
           gap: 1rem;
         }
+
+        @include mx.tablet_mediana {
+          height: 1.7rem;
+          border-radius: 0 0 1rem 1rem;
+        }
+
         p {
           font-size: 0.5rem;
-          @include mx.tablet_pequena {
-            font-size: 0.8rem;
+
+          @include mx.telefono_mediano {
+            font-size: 1rem;
+          }
+
+          @include mx.tablet_mediana {
+            font-size: 0.9rem;
           }
 
           &:last-of-type {

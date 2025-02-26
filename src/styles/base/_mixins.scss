@@ -18,8 +18,8 @@
   }
 }
 
-@mixin tablet-median {
-  @media (min-width: v.$tablet-median) {
+@mixin tablet-mediana {
+  @media (min-width: v.$tablet-mediana) {
     @content;
   }
 }

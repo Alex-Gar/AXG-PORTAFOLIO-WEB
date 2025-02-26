@@ -24,10 +24,11 @@ $fuente_principal: "Quicksand", serif;
 
 
 //Tamaño de media Queries
+//320PX PUNTO DE PARTIDA PARA DISPOSITIVOS MOVILES
 $telefono_pequeno: 480px;
 $telefono_mediano: 600px;
-$telefono_grande: 767px;
-$tablet_pequena: 1024px;
+$tablet_pequena: 767px;
+$tablet_mediana: 1024px;
 $tablet_grande: 1280px;
 $desktop_mediana: 1366px;
 $desktop_grande: 1920px;

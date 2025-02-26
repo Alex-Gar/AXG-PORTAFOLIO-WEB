@@ -11,9 +11,9 @@
   &::before {
     content: "";
     position: absolute;
-    top: 35%;
+    top: 45%;
     transform: translate(-50%, -50%);
-    width: 80rem;
+    width: 85rem;
     height: 130rem;
     background: radial-gradient(circle, rgba(74, 1, 123), transparent 70%);
     filter: blur(20px); /* Difumina los bordes */

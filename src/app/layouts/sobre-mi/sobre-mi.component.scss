@@ -3,33 +3,36 @@
 
 .gradiente {
   position: relative;
-  width: 100%;
-  height: 140rem;
   right: 5rem;
   z-index: -1;
 
   &::before {
     content: "";
     position: absolute;
-    top: 35%;
-    transform: translate(-50%, -50%);
-    width: 80rem;
-    height: 130rem;
+    transform: translate(-50%, -90%);
+    width: 70rem;
+    height: 150rem;
     background: radial-gradient(circle, rgba(74, 1, 123), transparent 70%);
     filter: blur(20px); /* Difumina los bordes */
     border-radius: 50%;
     pointer-events: none; /* Evita interferir con el contenido */
+
+    @include mx.tablet_mediana {
+      background: radial-gradient(circle, rgba(74, 1, 123, 0.55), transparent 65%);
+      transform: translate(-30%, -45%);
+      filter: blur(70px); /* Difumina los bordes */
+      width: 75%;
+      height: 150rem;
+    }
   }
 }
 
 .contenedor__sobreMi {
-  position: absolute;
-
   .sobreMi {
-    @include mx.telefono-grande{
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 4rem;
+    @include mx.tablet_pequena {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 4rem;
     }
 
     .sobreMi__info {
@@ -76,6 +79,10 @@
       &--texto {
         p {
           margin: 1rem 0;
+
+          @include mx.tablet_mediana {
+            margin: 2rem 0;
+          }
           span {
             color: v.$rosa-secundario;
           }

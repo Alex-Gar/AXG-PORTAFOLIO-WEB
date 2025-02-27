@@ -131,13 +131,13 @@
 .ocultar_menu {
   display: none;
 
-  @include mx.telefono_grande {
+  @include mx.tablet_pequena {
     display: block;
   }
 }
 
 .none {
-  @include mx.telefono_grande {
+  @include mx.tablet_pequena {
     display: none;
   }
 

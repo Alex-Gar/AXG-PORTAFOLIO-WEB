@@ -15,7 +15,9 @@
   }
   @include mx.desktop_grande {
     margin-left: 40rem;
+    // margin-left: clamp(40rem, 80vw, 100rem);
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -52,7 +54,6 @@
       height: 100rem;
       top: -15rem;
     }
-   
   }
 
   p {

@@ -1,0 +1,34 @@
+//Colores
+$fondo-principal: #0a0a10;
+$blanco: #ffffff;
+$morado: #813cff;
+$rosa-secundario:#C2104E;
+$morado-bajo: #bf9dff;
+$morado-secundario:#5401EA;
+$negro: #000000;
+
+$codigo-cadenas: #4D8B53;
+
+//Fuentes
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+//Tipografia
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+$binario: "Major Mono Display", serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+$fuente_principal: "Quicksand", serif;
+
+
+//Tamaño de media Queries
+//320PX PUNTO DE PARTIDA PARA DISPOSITIVOS MOVILES
+$telefono_pequeno: 480px;
+$telefono_mediano: 600px;
+$tablet_pequena: 767px;
+$tablet_mediana: 1024px;
+$tablet_grande: 1280px;
+$desktop_mediana: 1366px;
+$desktop_grande: 1920px;

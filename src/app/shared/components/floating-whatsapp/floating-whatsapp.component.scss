@@ -1,0 +1,116 @@
+@use "base/variables" as v;
+
+.floating-wpp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: end;
+
+  img {
+    // width: 6rem;
+    height: 6rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  bottom: 9rem;
+  right: 2rem;
+  background-color: #dddcdc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  .chat__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #075e54;
+    border-radius: 1rem 1rem 0 0;
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      color: v.$blanco;
+    }
+
+    &--texto {
+      p {
+        color: v.$blanco;
+        line-height: 1;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .chat__body {
+    background-image: url("/assets/img/fondo-whatsapp.jpg");
+    height: 4rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20vh;
+    padding: 2rem 0 0 0;
+
+    &--fondo {
+      .burbuja {
+        background-color: v.$blanco;
+        width: 70%;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .chat__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+
+    &--fondo {
+      width: 80%;
+      margin: 1rem;
+      border-radius: 1rem;
+      textarea {
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        color: rgb(73, 73, 73);
+        border: none;
+      }
+    }
+    .btn-whatsapp {
+      img {
+        width: 4rem;
+        height: auto;
+        mask-image: linear-gradient(black 90%, transparent);
+        display: flex;
+      }
+    }
+  }
+  p {
+    color: black;
+  }
+}

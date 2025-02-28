@@ -1,0 +1,179 @@
+@use "base/variables" as v;
+@use "base/mixins" as mx;
+
+.gradiente {
+  position: relative;
+  right: 5rem;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -90%);
+    width: 70rem;
+    height: 150rem;
+    background: radial-gradient(circle, rgba(74, 1, 123), transparent 70%);
+    filter: blur(20px); /* Difumina los bordes */
+    border-radius: 50%;
+    pointer-events: none; /* Evita interferir con el contenido */
+
+    @include mx.tablet_mediana {
+      background: radial-gradient(circle, rgba(74, 1, 123, 0.55), transparent 65%);
+      transform: translate(-30%, -45%);
+      filter: blur(70px); /* Difumina los bordes */
+      width: 75%;
+      height: 150rem;
+    }
+  }
+}
+
+.contenedor__sobreMi {
+  .sobreMi {
+    @include mx.tablet_pequena {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 4rem;
+    }
+
+    .sobreMi__info {
+      border-radius: 1rem;
+      backdrop-filter: blur(50px); /* Efecto de desenfoque */
+      background: rgba(255, 255, 255, 0.081); /* Fondo semitransparente */
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Borde semitransparente */
+      &--redes {
+        margin: 2rem 0;
+
+        .alinear-redes {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          margin: 2rem 0;
+
+          .circulo {
+            background-color: v.$blanco;
+            height: 1.5rem;
+            width: 1.5rem;
+            transform: rotate(0deg);
+            border-radius: 50%;
+            position: relative;
+          }
+
+          .barra {
+            &::before {
+              position: absolute;
+              content: "";
+              background-color: v.$blanco;
+              height: 11rem;
+              width: 0.3rem;
+              left: 0.6rem;
+            }
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      &--texto {
+        p {
+          margin: 1rem 0;
+
+          @include mx.tablet_mediana {
+            margin: 2rem 0;
+          }
+          span {
+            color: v.$rosa-secundario;
+          }
+        }
+      }
+    }
+  }
+}
+
+h3 {
+  text-align: start;
+  margin: 2.5rem 0 0.5rem 0rem;
+}
+
+.educacion {
+  &--lista {
+    margin-left: 2.5rem;
+    .elementos {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      p {
+        font-weight: v.$bold;
+        line-height: 2;
+      }
+    }
+    .circulo {
+      background-color: v.$blanco;
+      height: 1.5rem;
+      width: 1.5rem;
+      transform: rotate(0deg);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .barra {
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: v.$blanco;
+        height: 4.5rem;
+        width: 0.2rem;
+        left: 0.6rem;
+      }
+    }
+  }
+}
+.experiencia {
+  &--lista {
+    margin-left: 2.5rem;
+    .lugar {
+      display: flex;
+      margin-bottom: 2rem;
+      gap: 2rem;
+
+      .fecha {
+        font-weight: v.$light;
+        font-size: 1.2rem;
+      }
+      .logotipo {
+        font-weight: v.$bold;
+        font-size: 2rem;
+      }
+      .texto {
+        li {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  .circulo {
+    background-color: v.$blanco;
+    height: 1.5rem;
+    width: 1.5rem;
+    max-width: 10rem;
+    transform: rotate(0deg);
+    border-radius: 50%;
+    padding: 0.9rem;
+    position: relative;
+  }
+
+  .barra {
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: v.$blanco;
+      height: 23rem;
+      width: 0.2rem;
+      left: 0.75rem;
+    }
+  }
+}

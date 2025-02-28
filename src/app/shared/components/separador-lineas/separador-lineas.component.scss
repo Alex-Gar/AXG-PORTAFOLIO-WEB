@@ -1,0 +1,51 @@
+@use "base/variables" as v;
+@use "base/mixins" as mx;
+
+.separador__lineas {
+  height: 5rem;
+
+  &--linea1 {
+    background-color: v.$rosa-secundario;
+    transform: rotate(4deg);
+    @include mx.tablet_mediana {
+      transform: rotate(3deg);
+    }
+  }
+  &--linea2 {
+    background-color: v.$morado-secundario;
+    transform: rotate(-4deg);
+    margin: -2.85rem 0;
+
+    @include mx.tablet_mediana {
+      transform: rotate(-3deg);
+    }
+
+    @include mx.telefono_mediano {
+      margin: -3.5rem 0;
+    }
+  }
+
+  .lineas {
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+    @include mx.tablet_mediana {
+   justify-content: space-between;
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: v.$bold;
+      opacity: 0.6;
+      flex: 0 0 auto;
+
+      @include mx.telefono_mediano {
+        font-size: 2rem;
+      }
+
+      @include mx.tablet_mediana {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

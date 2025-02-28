@@ -1,0 +1,7 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.btn_download {
+   margin: 0 auto;
+   @include mx.btn(v.$morado);
+}

@@ -1,0 +1,57 @@
+@use "variables" as v;
+
+@mixin telefono-pequeno {
+  @media (min-width: v.$telefono_pequeno) {
+    @content;
+  }
+}
+
+@mixin telefono-mediano {
+  @media (min-width: v.$telefono_mediano) {
+    @content;
+  }
+}
+
+@mixin tablet_pequena {
+  @media (min-width: v.$tablet_pequena) {
+    @content;
+  }
+}
+
+@mixin tablet-mediana {
+  @media (min-width: v.$tablet-mediana) {
+    @content;
+  }
+}
+
+@mixin tablet-grande {
+  @media (min-width: v.$tablet_grande) {
+    @content;
+  }
+}
+
+@mixin desktop-mediana {
+  @media (min-width: v.$desktop_mediana) {
+    @content;
+  }
+}
+
+@mixin desktop-grande {
+  @media (min-width: v.$desktop_grande) {
+    @content;
+  }
+}
+
+@mixin grid($columnas, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}
+
+@mixin btn($color) {
+  background-color: $color;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-weight: v.$bold;
+  border-radius: 0.7rem;
+}

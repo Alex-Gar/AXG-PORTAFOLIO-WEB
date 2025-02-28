@@ -5,7 +5,6 @@ import { SeparadorTecnologiasComponent } from "../../shared/components/separador
 import { SeparadorLineasComponent } from "../../shared/components/separador-lineas/separador-lineas.component";
 import { NavComponent } from "../../layouts/header/nav/nav.component";
 import { TecnologiasComponent } from "../../layouts/tecnologias/tecnologias.component";
-// import { SeparadorLineasComponent } from "../../shared/components/separador-lineas/separador-lineas.component";
 
 @Component({
   selector: 'app-home',
@@ -15,5 +14,6 @@ import { TecnologiasComponent } from "../../layouts/tecnologias/tecnologias.comp
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
+
 
 }

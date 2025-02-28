@@ -2,7 +2,6 @@ function HOMEINIT($) {
   "use strict";
 
   var windown = $(window);
-  
   // Offcanvas Js
   $(".tp-offcanvas-open-btn").on("click", function () {
     $(".offcanvas__area").addClass("offcanvas-opened");
@@ -70,4 +69,5 @@ function HOMEINIT($) {
       },
     },
   });
+
 }

@@ -31,18 +31,22 @@
 /*----------------------------------------*/
 
 .offcanvas__close {
-  position: absolute;
-  top: 2.5rem;
-  right: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  margin: 2.5rem 0;
+  align-items: center;
 }
 
 .offcanvas__close-btn {
   display: inline-block;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   background-color: transparent;
-  color: v.$negro;
-  background-color: v.$blanco;
+  color: v.$blanco;
+  background: radial-gradient(circle, rgba(74, 1, 123), transparent 90%);
+  border-radius: 50%;
+  border: none;
 }
 .offcanvas__close-btn:hover {
   background-color: v.$morado;
@@ -98,11 +102,6 @@
 
   .offcanvas__content {
     display: flex;
-    flex-direction: column;
-
-    .nav {
-      display: flex;
-    }
   }
 }
 
@@ -117,10 +116,14 @@
 .nav {
   display: flex;
   gap: 1.5rem;
-
+  &-responsive {
+    flex-direction: column;
+    margin-left: 4rem;
+  }
   &-link {
+    display: block;
     a {
-      color: v.$blanco;
+      font-size: 1.8rem;
       &:hover {
         border-bottom: 0.5rem v.$morado solid;
       }
@@ -152,4 +155,9 @@
   button:hover {
     cursor: pointer;
   }
+}
+
+.logotipo {
+  font-weight: v.$bold;
+  font-size: 2rem;
 }

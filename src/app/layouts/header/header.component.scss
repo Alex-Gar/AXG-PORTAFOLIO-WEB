@@ -4,6 +4,9 @@
 .gradiente {
   position: relative;
   z-index: -2;
+  display: flex;
+  justify-content: center;
+
   @include mx.tablet_mediana {
     margin-left: 2rem;
   }
@@ -67,6 +70,16 @@
     font-size: 1rem;
     text-align: center;
     font-family: v.$binario;
+
+    @include mx.telefono_mediano {
+      width: 80%;
+      padding-top: 13rem;
+      font-size: 1.25rem;
+      overflow: visible;
+    }
+    @include mx.tablet_pequena {
+      width: 65%;
+    }
 
     @include mx.tablet_mediana {
       overflow: visible;
@@ -180,6 +193,24 @@
         .linkedin {
           right: 18rem;
           top: 24rem;
+        }
+      }
+      @include mx.tablet_pequena {
+        .gmail {
+          left: 22rem;
+          bottom: 40rem;
+        }
+        .instagram {
+          right: 22rem;
+          bottom: 52rem;
+        }
+        .github {
+          left: 22rem;
+          bottom: 64rem;
+        }
+        .linkedin {
+          right: 25rem;
+          top: 20rem;
         }
       }
 
